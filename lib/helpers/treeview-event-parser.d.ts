@@ -1,0 +1,32 @@
+import { TreeviewItem } from '../models/treeview-item';
+import { TreeviewComponent } from '../components/treeview/treeview.component';
+import * as ɵngcc0 from '@angular/core';
+export declare abstract class TreeviewEventParser {
+    abstract getSelectedChange(component: TreeviewComponent): any[];
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<TreeviewEventParser>;
+    static ɵprov: ɵngcc0.ɵɵInjectableDef<TreeviewEventParser>;
+}
+export declare class DefaultTreeviewEventParser extends TreeviewEventParser {
+    getSelectedChange(component: TreeviewComponent): any[];
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<DefaultTreeviewEventParser>;
+    static ɵprov: ɵngcc0.ɵɵInjectableDef<DefaultTreeviewEventParser>;
+}
+export interface DownlineTreeviewItem {
+    item: TreeviewItem;
+    parent: DownlineTreeviewItem;
+}
+export declare class DownlineTreeviewEventParser extends TreeviewEventParser {
+    getSelectedChange(component: TreeviewComponent): any[];
+    private getLinks;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<DownlineTreeviewEventParser>;
+    static ɵprov: ɵngcc0.ɵɵInjectableDef<DownlineTreeviewEventParser>;
+}
+export declare class OrderDownlineTreeviewEventParser extends TreeviewEventParser {
+    private currentDownlines;
+    private parser;
+    getSelectedChange(component: TreeviewComponent): any[];
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<OrderDownlineTreeviewEventParser>;
+    static ɵprov: ɵngcc0.ɵɵInjectableDef<OrderDownlineTreeviewEventParser>;
+}
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJlZXZpZXctZXZlbnQtcGFyc2VyLmQudHMiLCJzb3VyY2VzIjpbInRyZWV2aWV3LWV2ZW50LXBhcnNlci5kLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7QUFFQTs7OztBQUVBOzs7OztBQUdBOzs7Ozs7Ozs7O0FBUUE7Ozs7Ozs7QUFLQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFRyZWV2aWV3SXRlbSB9IGZyb20gJy4uL21vZGVscy90cmVldmlldy1pdGVtJztcclxuaW1wb3J0IHsgVHJlZXZpZXdDb21wb25lbnQgfSBmcm9tICcuLi9jb21wb25lbnRzL3RyZWV2aWV3L3RyZWV2aWV3LmNvbXBvbmVudCc7XHJcbmV4cG9ydCBkZWNsYXJlIGFic3RyYWN0IGNsYXNzIFRyZWV2aWV3RXZlbnRQYXJzZXIge1xyXG4gICAgYWJzdHJhY3QgZ2V0U2VsZWN0ZWRDaGFuZ2UoY29tcG9uZW50OiBUcmVldmlld0NvbXBvbmVudCk6IGFueVtdO1xyXG59XHJcbmV4cG9ydCBkZWNsYXJlIGNsYXNzIERlZmF1bHRUcmVldmlld0V2ZW50UGFyc2VyIGV4dGVuZHMgVHJlZXZpZXdFdmVudFBhcnNlciB7XHJcbiAgICBnZXRTZWxlY3RlZENoYW5nZShjb21wb25lbnQ6IFRyZWV2aWV3Q29tcG9uZW50KTogYW55W107XHJcbn1cclxuZXhwb3J0IGludGVyZmFjZSBEb3dubGluZVRyZWV2aWV3SXRlbSB7XHJcbiAgICBpdGVtOiBUcmVldmlld0l0ZW07XHJcbiAgICBwYXJlbnQ6IERvd25saW5lVHJlZXZpZXdJdGVtO1xyXG59XHJcbmV4cG9ydCBkZWNsYXJlIGNsYXNzIERvd25saW5lVHJlZXZpZXdFdmVudFBhcnNlciBleHRlbmRzIFRyZWV2aWV3RXZlbnRQYXJzZXIge1xyXG4gICAgZ2V0U2VsZWN0ZWRDaGFuZ2UoY29tcG9uZW50OiBUcmVldmlld0NvbXBvbmVudCk6IGFueVtdO1xyXG4gICAgcHJpdmF0ZSBnZXRMaW5rcztcclxufVxyXG5leHBvcnQgZGVjbGFyZSBjbGFzcyBPcmRlckRvd25saW5lVHJlZXZpZXdFdmVudFBhcnNlciBleHRlbmRzIFRyZWV2aWV3RXZlbnRQYXJzZXIge1xyXG4gICAgcHJpdmF0ZSBjdXJyZW50RG93bmxpbmVzO1xyXG4gICAgcHJpdmF0ZSBwYXJzZXI7XHJcbiAgICBnZXRTZWxlY3RlZENoYW5nZShjb21wb25lbnQ6IFRyZWV2aWV3Q29tcG9uZW50KTogYW55W107XHJcbn1cclxuIl19
